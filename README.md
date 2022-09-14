@@ -55,6 +55,7 @@
 - Open User Directory: ユーザーディレクトリーを開きます。
   - 'JSLoadedScriptsinfo'　が、登録されたスクリプト/アドイン管理ファイルです。
 - Open Active Command Resource Folder: 実行中のコマンドダイアログのリソースフォルダを開きます。
+- Open Commands Folder: コマンドを追加するためのフォルダーを開きます。
 ---
 - Dump Document Attributes: アクティブなドキュメントの属性情報をダンプします。
 - Remove Document Attributes: アクティブなドキュメントの属性情報を全て削除します。
