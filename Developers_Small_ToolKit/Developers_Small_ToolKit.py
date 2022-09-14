@@ -17,7 +17,7 @@ _startUp = []
 _cmdInfo = {
     'id': 'KANTOKU_Developers_Small_ToolKit',
     'name': 'Developers Small ToolKit',
-    'tooltip': 'AutoButtonTest',
+    'tooltip': 'Developers Small ToolKit',
     'resources': 'resources'
 }
 
