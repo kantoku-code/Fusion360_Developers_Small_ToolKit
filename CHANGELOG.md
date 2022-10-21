@@ -1,5 +1,8 @@
 # Change of Fusion360 Developers Small ToolKit
 
+## 0.1.2
++ exportTxtCmdLst コマンド修正
+
 ## 0.1.1
 + Open Commands Folder コマンド追加
 

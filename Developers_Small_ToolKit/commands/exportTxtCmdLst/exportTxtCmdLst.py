@@ -23,6 +23,7 @@ def run(context):
         if len(path) < 1:
             return
 
+        app.executeTextCommand(u'TextCommands.Show /All')
         txtCmd = u'TextCommands.List /Hidden'
         data = app.executeTextCommand(txtCmd)
         data = data.replace('\r', '')
