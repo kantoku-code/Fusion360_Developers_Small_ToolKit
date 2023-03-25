@@ -33,6 +33,7 @@
 - Close all docs: 開かれているドキュメントで変更の無いものは先に閉じ、残り全て**保存せず**閉じます。
 - Remove Custom Graphics: 全てのカスタムグラフィックスを削除します。
 - Export TextCommands List: TextCommands(txt)のコマンドリストをファイルに保存します。
+- Create Language Startup Fusion360 Script: 日本語・英語を指定して起動するためのスクリプトファイルを作成します。
 ---
 - Open CustomPost Folder: カスタムされた製造ポストファイル(cps)のフォルダーを開きます。
 - Open InstallPost Folder: インストールされた製造ポストファイル(cps)のフォルダーを開きます。

@@ -1,5 +1,8 @@
 # Change of Fusion360 Developers Small ToolKit
 
+## 0.1.3
++ Create Language Startup Fusion360 Script コマンドを追加
+
 ## 0.1.2
 + exportTxtCmdLst コマンド修正
 
