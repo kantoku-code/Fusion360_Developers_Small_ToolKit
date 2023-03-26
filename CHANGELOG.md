@@ -1,5 +1,8 @@
 # Change of Fusion360 Developers Small ToolKit
 
+## 0.1.4
++  xmlファイル保護の為、連続起動防止機能追加(Create Language Startup Fusion360 Script)
+
 ## 0.1.3
 + Create Language Startup Fusion360 Script コマンドを追加
 
