@@ -1,14 +1,18 @@
 'by kantoku
 Const FUSION_PATH = "@fusionpath"
 Const XML_PATH = "@xmlpath"
-Const SLEEP_TIME = 10000
+Const SLEEP_TIME = 5000
+Const BLOCK_NAME = "block.txt"
 
 call main()
 
 Sub main()
 
+    Dim blockPath
+    blockPath = getBlockPath()
+
     Dim msg
-    msg = canExec()
+    msg = canExec(blockPath)
     if len(msg) > 0 Then
         msgbox msg
         exit Sub
@@ -30,11 +34,13 @@ Sub main()
             Exit Sub
     End Select
 
-    startFusion lang
+    createBlockFile blockPath
+
+    startFusion lang, blockPath
 
 End Sub
 
-Sub startFusion(lang)
+Sub startFusion(lang, blockPath)
 
     'バックアップ
     Dim backUpPath
@@ -71,13 +77,28 @@ Sub startFusion(lang)
 
     '削除,復旧
     WScript.Sleep SLEEP_TIME
+    removeFile blockPath
+
     fso.DeleteFile XML_PATH
     renameFile backUpPath, XML_PATH
 
 End Sub
 
 
-Function canExec()
+Function getBlockPath()
+
+    Dim blockAry
+    blockAry = splitPathName(XML_PATH)
+    ary = split(BLOCK_NAME, ".")
+    blockAry(1) = ary(0)
+    blockAry(2) = ary(1)
+
+    getBlockPath = joinPathName(blockAry)
+
+end Function
+
+
+Function canExec(blockPath)
 
     Dim fso
     Set fso = getFso()
@@ -93,7 +114,37 @@ Function canExec()
         msg = msg & "[NMachineSpecificOptions.xml]のパスが間違っています。"
     End If
 
+    If fso.FileExists(blockPath) Then
+        msg = msg & "他のプロセスが実行中です。もう少し時間を置いて実行してください。"
+    End If
+
     canExec = msg
+
+End Function
+
+
+Function createBlockFile(blockPath)
+
+    Dim fso
+    Set fso = getFso()
+
+    Dim msg
+    msg = "本ファイルに心当たりが無ければ、削除して大丈夫です。"
+
+    With fso.CreateTextFile(blockPath)
+        .WriteLine msg
+        .Close
+    End With
+
+End Function
+
+
+Function removeFile(path)
+
+    Dim fso
+    Set fso = getFso()
+
+    fso.DeleteFile path
 
 End Function
 
@@ -187,6 +238,7 @@ Function createNode(dom)
 
 End Function
 
+
 Function getAttributeByName(node, name)
 
     Set getAttributeByName = Nothing
@@ -201,6 +253,7 @@ Function getAttributeByName(node, name)
 
 End Function
 
+
 Function getElementByTagName(node, name)
 
     Set getElementByTagName = Nothing
@@ -212,6 +265,7 @@ Function getElementByTagName(node, name)
     Set getElementByTagName = lst.Item(0)
 
 End Function
+
 
 Function get_dom(path)
 
