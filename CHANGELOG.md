@@ -1,5 +1,8 @@
 # Change of Fusion360 Developers Small ToolKit
 
+## 0.1.5
++ commandLogging コマンド - 不正確なパネル情報の出力を修正
+
 ## 0.1.4
 +  xmlファイル保護の為、連続起動防止機能追加(Create Language Startup Fusion360 Script)
 
