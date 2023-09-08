@@ -1,0 +1,2904 @@
+
+name: advancedMode
+    title: Advanced Mode
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: allowContourRamps
+    title: 
+    expression: "(rampType == 'helix') || (rampType == 'smooth profile')"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: allowHelicalRamps
+    title: 
+    expression: "rampType == 'helix'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: allowPlunging
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: allowRapidRetract
+    title: 早送り退避を許可
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: allowSmoothContourRamps
+    title: 
+    expression: "(rampType == 'helix') || (rampType == 'smooth profile')"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: allowZigZagRamps
+    title: 
+    expression: "rampType == 'zigzag'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: alphaMode
+    title: Alpha Mode
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: alwaysMakeContourRamp
+    title: 強制プロファイル ランプ
+    expression: "doRamp"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: applyFinalSmoothingDeviation
+    title: 
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: associatedView
+    title: Associated View
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    CadObjectParameterValue
+        value: Empty
+
+name: betaMode
+    title: Beta Mode
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: bothWays
+    title: 両方向
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: bottomHeight_absolute
+    title: 
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: bottomHeight_group
+    title: ボトム高さ
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: bottomHeight_mode
+    title: 始点
+    expression: "'from contour'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: from contour
+        choices:
+            name: 移動高さ, value: 'from clearance height'
+            name: 退避高さ, value: 'from retract height'
+            name: 送り高さ, value: 'from feed height'
+            name: トップ高さ, value: 'from top'
+            name: モデル トップ, value: 'from surface top'
+            name: モデル ボトム, value: 'from surface bottom'
+            name: ストック トップ, value: 'from stock top'
+            name: ストック ボトム, value: 'from stock bottom'
+            name: 選択された輪郭, value: 'from contour'
+            name: 選択, value: 'from point'
+            name: 原点(絶対), value: 'from wcs'
+
+name: bottomHeight_offset
+    title: オフセット
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: bottomHeight_ref
+    title: 参照ボトム
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: bottomHeight_value
+    title: 
+    expression: "0.0"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: calculationTolerance
+    title: 計算許容値
+    expression: "tolerance"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.001
+
+name: chainingTolerance
+    title: チェーン許容差
+    expression: "0.01mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.001
+
+name: chamferDepthBall
+    title: 面取り深さ
+    expression: "chamferWidthBall"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: chamferTipOffset
+    title: 面取り先端オフセット
+    expression: "0mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: chamferWidth
+    title: 面取り幅
+    expression: "0mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: chamferWidthBall
+    title: 面取り幅
+    expression: "tool_cornerRadius/4"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: clearanceHeight_absolute
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: clearanceHeight_group
+    title: 移動高さ
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: clearanceHeight_mode
+    title: 始点
+    expression: "'from retract height'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: from retract height
+        choices:
+            name: 退避高さ, value: 'from retract height'
+            name: 送り高さ, value: 'from feed height'
+            name: トップ高さ, value: 'from top'
+            name: ボトム高さ, value: 'from bottom'
+            name: モデル トップ, value: 'from surface top'
+            name: モデル ボトム, value: 'from surface bottom'
+            name: ストック トップ, value: 'from stock top'
+            name: ストック ボトム, value: 'from stock bottom'
+            name: 選択された輪郭, value: 'from contour'
+            name: 選択, value: 'from point'
+            name: 原点(絶対), value: 'from wcs'
+
+name: clearanceHeight_offset
+    title: オフセット
+    expression: "10mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 1.0
+
+name: clearanceHeight_ref
+    title: 移動高さ参照
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: clearanceHeight_value
+    title: 
+    expression: "46."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 4.6000000000000005
+
+name: compensation
+    title: 横方向の補正
+    expression: "'left'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: left
+        choices:
+            name: 左, value: 'left'
+            name: 右, value: 'right'
+
+name: compensationDeltaRadius
+    title: 半径補正代
+    expression: "(numberOfFinishingStepovers > 0) ? Math.min(tool_diameter * 0.05; finishingStepover * 0.95) : (tool_diameter * 0.05)"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: compensationType
+    title: 補正タイプ
+    expression: "'computer'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: computer
+        choices:
+            name: コンピュータ, value: 'computer'
+            name: 制御機, value: 'control'
+            name: 摩耗補正, value: 'wear'
+            name: 逆摩耗補正, value: 'inverseWear'
+            name: オフ, value: 'off'
+
+name: context
+    title: Context
+    expression: "'operation'"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: operation
+
+name: contourTolerance
+    title: 輪郭線形化許容差
+    expression: "tolerance * 0.5"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0005
+
+name: contours
+    title: 輪郭選択
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    CadContours2dParameterValue
+        Curve Selection 1: ChainSelection
+            startExtensionLength: 0.0
+            endExtensionLength: 0.0
+            extensionMethod: 0
+            isOpen: False
+            isOpenAllowed: True
+            endExtensionLength: 0.0
+            isReverted: False
+            extensionType: 1
+            isReverted: False
+            inputGeometry:
+                BRepEdge
+                BRepEdge
+            value:
+                BRepEdge
+                BRepEdge
+
+name: contours_loops
+    title: ループ
+    expression: "'all'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: all
+        choices:
+            name: すべてのループ, value: 'all'
+            name: 外側のループ, value: 'outer'
+            name: 内側のループ, value: 'inner'
+
+name: contours_side
+    title: サイド
+    expression: "'start-outside'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: start-outside
+        choices:
+            name: 外側から開始, value: 'start-outside'
+            name: 内側から開始, value: 'start-inside'
+            name: 常に外側, value: 'all-outside'
+            name: 常に内側, value: 'all-inside'
+
+name: cornerMode
+    title: 外側コーナー モード
+    expression: "'roll'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: roll
+        choices:
+            name: コーナーでロール, value: 'roll'
+            name: シャープ コーナーを保持, value: 'sharp'
+            name: ループでシャープ コーナーを保持, value: 'sharp with loop'
+
+name: doChamfer
+    title: 面取り
+    expression: "tool_type == 'chamfer mill' || tool_type == 'center drill' || tool_type == 'counter sink' || tool_type == 'drill' || tool_type == 'spot drill'"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: doLeadIn
+    title: 進入
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: doLeadOut
+    title: 退出
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: doMultipleDepths
+    title: 複数深さ
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: doMultipleFinishingPasses
+    title: 複数仕上げパス
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: doRamp
+    title: ランプ
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: doRoughingPasses
+    title: 粗取りパス
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: doSeparateTangentialEndExtension
+    title: 接線終点延長を別にする
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: doWrap
+    title: ツールパスをラップ
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: ensureCutRadius
+    title: 
+    expression: "maximumEnsureCutRadius"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.48750000000000004
+
+name: entryPositions
+    title: 推奨進入位置
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    CadObjectParameterValue
+        value: Empty
+
+name: entry_distance
+    title: 直線進入距離
+    expression: "tool_diameter * 0.1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: entry_perpendicular
+    title: 垂直
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: entry_radius
+    title: 水平進入半径
+    expression: "tool_diameter * 0.1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: entry_sweep
+    title: 進入内角度
+    expression: "cornerMode == 'sharp with loop' ? 0.0deg : 90.0deg"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: entry_verticalRadius
+    title: 垂直進入半径
+    expression: "entry_radius"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: exitPositions
+    title: 退出位置
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    CadObjectParameterValue
+        value: Empty
+
+name: exit_distance
+    title: 直線退出距離
+    expression: "tool_diameter * 0.1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: exit_perpendicular
+    title: 垂直
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: exit_radius
+    title: 水平退出半径
+    expression: "tool_diameter * 0.1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: exit_sameAsEntry
+    title: 進入と同じ
+    expression: "true"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: exit_sweep
+    title: 退出内角度
+    expression: "90.0deg"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: exit_verticalRadius
+    title: 垂直退出半径
+    expression: "exit_radius"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: featureOperationId
+    title: Feature Operation ID
+    expression: "'none'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: none
+        choices:
+            name: フィーチャにありません, value: 'none'
+            name: 粗取り, value: 'rough'
+            name: 終了, value: 'finish'
+
+name: feedHeight_absolute
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: feedHeight_group
+    title: 送り高さ
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: feedHeight_mode
+    title: 始点
+    expression: "'from top'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: from top
+        choices:
+            name: 移動高さ, value: 'from clearance height'
+            name: 退避高さ, value: 'from retract height'
+            name: 無効, value: 'disabled'
+            name: トップ高さ, value: 'from top'
+            name: ボトム高さ, value: 'from bottom'
+            name: モデル トップ, value: 'from surface top'
+            name: モデル ボトム, value: 'from surface bottom'
+            name: ストック トップ, value: 'from stock top'
+            name: ストック ボトム, value: 'from stock bottom'
+            name: 選択された輪郭, value: 'from contour'
+            name: 選択, value: 'from point'
+            name: 原点(絶対), value: 'from wcs'
+
+name: feedHeight_offset
+    title: オフセット
+    expression: "5mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.5
+
+name: feedHeight_ref
+    title: 参照送り高さ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: feedHeight_value
+    title: 送り高さ
+    expression: "36."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.6
+
+name: finishFeedrate
+    title: 仕上げ送り速度
+    expression: "tool_feedCutting"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 1000.0
+
+name: finishingOverlap
+    title: 仕上げオーバーラップ
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: finishingSmoothingDeviation
+    title: 仕上げ円滑化公差
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: finishingStepdown
+    title: 仕上げ切込みピッチ
+    expression: "0.2mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.020000000000000004
+
+name: finishingStepover
+    title: 切削ピッチ
+    expression: "tool_diameter * 0.1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.1
+
+name: flatTipRadius
+    title: 
+    expression: "tool_type == 'tapered mill' ? (tool_taperedType =='tapered_ball' ? tool_diameter / 2 : tool_diameter/2 - tool_cornerRadius) : tool_diameter/2 - tool_cornerRadius"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.5
+
+name: fragmentExtensionDistance
+    title: 断片延長距離
+    expression: "0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: gougingTolerance
+    title: 
+    expression: "calculationTolerance"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.001
+
+name: group_entry_drill_positions
+    title: 位置
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: group_feedspeed
+    title: 送りと速度
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: group_geometry
+    title: 形状
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: group_leadsTranstions
+    title: 進入動作
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: group_linking
+    title: リンク
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: group_passes
+    title: パス
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: group_tabs
+    title: タブ
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: group_tool
+    title: 工具
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: helicalRampDiameter
+    title: らせんランプ直径
+    expression: "Math.max((tool_diameter - 2 * tool_cornerRadius) * 0.95; tool_diameter * 0.25)"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: highFeedrate
+    title: 高速送り速度
+    expression: "Math.max(tool_feedCutting; Math.max(tool_feedEntry; tool_feedExit))"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1000.0
+
+name: highFeedrateMode
+    title: 高速送りモード
+    expression: "'disabled'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: disabled
+        choices:
+            name: 早送り動作を保持, value: 'disabled'
+            name: 軸方向と径方向早送り動作を保持, value: 'axial-radial'
+            name: 軸方向早送り動作を保持, value: 'axial'
+            name: 径方向早送り動作を保持, value: 'radial'
+            name: 単一軸の早送り動作を保持, value: 'single'
+            name: 高速送り速度を保持, value: 'always'
+
+name: holder_attached
+    title: アタッチされたホルダー
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: holder_comment
+    title: ホルダー コメント
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: holder_description
+    title: ホルダー説明
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: holder_libraryName
+    title: ホルダー ライブラリ
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: holder_productId
+    title: ホルダー プロダクト ID
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: holder_productLink
+    title: ホルダー プロダクト リンク
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: holder_vendor
+    title: ホルダー ベンダー
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: isAssemblyDocument
+    title: IsAssemblyDocument
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: isXpress
+    title: Inventor CAM Express
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: keepToolDown
+    title: 工具退避動作無効
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: leadEndDistance
+    title: 進入エンド距離
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: leadInRadius
+    title: 
+    expression: "entry_radius"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: leadInVerticalRadius
+    title: 
+    expression: "entry_verticalRadius"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: leadOutRadius
+    title: 
+    expression: "exit_radius"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: leadOutVerticalRadius
+    title: 
+    expression: "exit_verticalRadius"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: leadsForAllFinishingPasses
+    title: すべての仕上げパスの進入
+    expression: "compensationType != 'computer'"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: license3D
+    title: 3D licensed
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: licenseMultiaxis
+    title: Multi-axis licensed
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: liftHeight
+    title: 変位の高さ
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: machineOrientationInfo
+    title: Machine Info
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: makeSharpCorners
+    title: シャープ コーナー作成
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: maximumEnsureCutRadius
+    title: 
+    expression: "((tool_type == 'chamfer mill') || (tool_type == 'counter sink') ) ? 0.4875*tool_tipDiameter : 0.4875*tool_diameter"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.48750000000000004
+
+name: maximumRampZStepdown
+    title: 最大ランプ切込みピッチ
+    expression: "maximumStepdown > 0 ? maximumStepdown : tool_fluteLength"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.6000000000000001
+
+name: maximumRoughingSteps
+    title: 切削ピッチ回数
+    expression: "1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0
+
+name: maximumStepdown
+    title: 最大粗取り切込みピッチ
+    expression: "6 mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.6000000000000001
+
+name: maximumStepover
+    title: 最大切削ピッチ
+    expression: "Math.max((tool_diameter - (2 * tool_cornerRadius)) * 0.95; tool_diameter * 0.20)"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.9500000000000001
+
+name: metric
+    title: メトリック
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: minimumCuttingRadius
+    title: 最小切削半径
+    expression: "0.0"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: minimumCuttingRadiusJl
+    title: 
+    expression: "minimumCuttingRadius"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: minimumFinishingStepover
+    title: 
+    expression: "0.25*finishingStepover"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.025
+
+name: minimumRampDiameter
+    title: 最小ランプ直径
+    expression: "helicalRampDiameter"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: minimumRoughingStepover
+    title: 
+    expression: "0.1 * maximumStepover"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.09500000000000001
+
+name: noTabZones
+    title: タブ ゾーンがありません
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: nullPass
+    title: 仕上げパス繰り返し
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: numberOfFinishingStepdowns
+    title: 仕上げ切込みピッチ
+    expression: "0"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0
+
+name: numberOfFinishingStepovers
+    title: 仕上げパス回数
+    expression: "2"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1
+
+name: onlyFinishFinal
+    title: 最終深さのみ仕上げる
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: operation_description
+    title: Operation description
+    expression: "'2D Contour'"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 2D Contour
+
+name: orderByDepth
+    title: 深さ順
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: orderByIslands
+    title: アイランドを基準に順番
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: orderByStep
+    title: ステップ順
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: overrideToolView
+    title: 工具方向
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: predrillPositions
+    title: 下穴ドリル位置
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    CadObjectParameterValue
+        value: Empty
+
+name: preserveOrder
+    title: 順序を保持
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: preset_select
+    title: プリセット
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: rampAngle
+    title: ランプ角度(度)
+    expression: "2.0deg"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 2.0
+
+name: rampClearanceHeight
+    title: ランプ除去高さ
+    expression: "2.5mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: rampType
+    title: ランプ タイプ
+    expression: "'profile'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: 
+        choices:
+
+name: reduceOnlyInnerCorners
+    title: 内側コーナーのみ
+    expression: "true"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: True
+
+name: reducedFeedChange
+    title: 最大方向変更
+    expression: "25deg"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 25.0
+
+name: reducedFeedDistance
+    title: 短縮された送り距離
+    expression: "tool_diameter * 0.2"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: reducedFeedRadius
+    title: 短縮された送り半径
+    expression: "tool_diameter * 0.05"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: reducedFeedrate
+    title: 減速された送り速度
+    expression: "tool_feedCutting * 0.25"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 250.0
+
+name: restMaterialCornerRadius
+    title: コーナー半径
+    expression: "0 mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: restMaterialCutterDiameter
+    title: 工具直径
+    expression: "tool_diameter * 2"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 2.0
+
+name: restMaterialShoulderLength
+    title: 首下長
+    expression: "restMaterialCutterDiameter"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: restMaterialStockToLeave
+    title: 維持するストック
+    expression: "0mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: restMaterialTaperAngle
+    title: テーパ角度
+    expression: "0deg"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: restMaterialTool
+    title: 
+    expression: "''"
+    isEditable: False
+    isEnabled: False
+    StringParameterValue
+        value: 
+
+name: retractHeight_absolute
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: retractHeight_group
+    title: 退避高さ
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: retractHeight_mode
+    title: 始点
+    expression: "'from stock top'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: from stock top
+        choices:
+            name: 移動高さ, value: 'from clearance height'
+            name: 送り高さ, value: 'from feed height'
+            name: トップ高さ, value: 'from top'
+            name: ボトム高さ, value: 'from bottom'
+            name: モデル トップ, value: 'from surface top'
+            name: モデル ボトム, value: 'from surface bottom'
+            name: ストック トップ, value: 'from stock top'
+            name: ストック ボトム, value: 'from stock bottom'
+            name: 選択された輪郭, value: 'from contour'
+            name: 選択, value: 'from point'
+            name: 原点(絶対), value: 'from wcs'
+
+name: retractHeight_offset
+    title: オフセット
+    expression: "5mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.5
+
+name: retractHeight_ref
+    title: 参照退避高さ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: retractHeight_value
+    title: 
+    expression: "36."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.6
+
+name: rightCompensation
+    title: 
+    expression: "compensation == 'right'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: roughFinal
+    title: 最終粗取り
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: safeDistance
+    title: 安全距離
+    expression: "5mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.5
+
+name: sandvik_edit_assembly
+    title: Sandvik
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    ** Failed to get value type.
+
+name: sandvik_get_cutting_data
+    title: Sandvik
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    ** Failed to get value type.
+
+name: sandvik_get_tool_recommendation
+    title: Sandvik
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    ** Failed to get value type.
+
+name: sandvik_select_assembly
+    title: Sandvik
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    ** Failed to get value type.
+
+name: sandvik_tool_params
+    title: Sandvik
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: selectCoPlanarFaces
+    title: 同一平面上の面を選択
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: simpleStockToLeave
+    title: Simple Stock To Leave
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: slopeAngle
+    title: 壁テーパ角度(度)
+    expression: "tool_taperAngle"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: smoothTransitions
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: smoothingDeviation
+    title: 円滑化公差
+    expression: "0.1mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.010000000000000002
+
+name: smoothingFilter
+    title: 円滑化
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: smoothingFilterTolerance
+    title: 円滑化トレランス
+    expression: "tolerance"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: stayDownDistance
+    title: 退避動作無効最大距離
+    expression: "50mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: stockContours
+    title: ストック選択
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadContours2dParameterValue
+        value: Empty
+
+name: stockToLeave
+    title: 径方向の仕上げ代
+    expression: "0.1mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: stockXHigh
+    title: Stock X High
+    expression: "31."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.1
+
+name: stockXLow
+    title: Stock X Low
+    expression: "-31."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: -3.1
+
+name: stockYHigh
+    title: Stock Y High
+    expression: "61."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 6.1000000000000005
+
+name: stockYLow
+    title: Stock Y Low
+    expression: "0.0"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: stockZHigh
+    title: 
+    expression: "31."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.1
+
+name: stockZLow
+    title: 
+    expression: "-31."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: -3.1
+
+name: strategy
+    title: 方法
+    expression: "'contour2d'"
+    isEditable: False
+    isEnabled: True
+    ChoiceParameterValue
+        value: contour2d
+        choices:
+            name: 負荷制御, value: 'adaptive'
+            name: 2D 負荷制御, value: 'adaptive2d'
+            name: 3MF シーンのエクスポート, value: 'additive_3mf_exportstrategy'
+            name: 整列, value: 'additive_arrange_strategy'
+            name: プリント設定, value: 'additive_buildstrategy_folder'
+            name: ボディ プリセット, value: 'additive_buildstrategy'
+            name: 積層ツールパス, value: 'additive_buildstyle'
+            name: マシンのビルド ファイルを作成, value: 'additive_exportstrategy'
+            name: 積層フォルダ, value: 'additivefolder'
+            name: Formlabs フォーム ファイルのエクスポート, value: 'additive_formlabs_exportstrategy'
+            name: インポートされた積層ツールパス, value: 'additive_importedbuildstyle'
+            name: 個別の加工法 , value: 'additive_individual_strategies'
+            name: 自動方向指定, value: 'additive_optimize_orientation'
+            name: 方向スタディ, value: 'additive_orientations_folder'
+            name: プリント時間, value: 'additive_printtime'
+            name: スタディ, value: 'AdditiveProcessSimulation'
+            name: プロセス シミュレーション, value: 'AdditiveProcessSimFolder'
+            name: 結果, value: 'AdditiveProcessSimResults'
+            name: Additivesimulation, value: 'additivesimulation'
+            name: サポート, value: 'additive_support'
+            name: サポート, value: 'additive_support_folder'
+            name: 傾斜度, value: 'angularity'
+            name: 角度位置寸法, value: 'angular_location'
+            name: 角度サイズ寸法, value: 'angular_size'
+            name: ソリッド バー サポート, value: 'areabar_additive_fff_support'
+            name: バー サポート, value: 'areabar_additive_support'
+            name: ポリライン サポート, value: 'areapolyline_additive_support'
+            name: ソリッド ボリュームのサポート, value: 'areavolume_additive_fff_support'
+            name: ボリューム サポート, value: 'areavolume_additive_support'
+            name: ベース プレート サポート, value: 'baseplate_additive_support'
+            name: ブレンド, value: 'blend'
+            name: ボア, value: 'bore'
+            name: 中心-内側寸法, value: 'center_inner_dimension'
+            name: 中心-外側寸法, value: 'center_outer_dimension'
+            name: 2D 面取り, value: 'chamfer2d'
+            name: 円形, value: 'circular'
+            name: 円周振れ, value: 'circular_runout'
+            name: ポリライン サポートによるクラスタ輪郭, value: 'clustercontourpolyline_additive_support'
+            name: CMM 検査設定, value: 'cmm_inspection_setup'
+            name: 同軸度, value: 'coaxiality'
+            name: 同心度, value: 'concentricity'
+            name: 接触領域, value: 'contact'
+            name: 2D 輪郭, value: 'contour2d'
+            name: 2D ポケット, value: 'pocket2d'
+            name: 輪郭機能フォルダ, value: 'contourFeatureFolder'
+            name: フォーム ミル, value: 'create_form_mill'
+            name: 曲線寸法, value: 'curved_location_dimension'
+            name: 曲線寸法, value: 'curve_length'
+            name: 刃物位置データ, value: 'cld'
+            name: 円筒度, value: 'cylindricity'
+            name: CAD をパーツに位置合わせ, value: 'datum'
+            name: CAD をパーツに位置合わせした結果, value: 'datum_result'
+            name: 直径寸法, value: 'diameter_dimension'
+            name: 下向きの点/バーのサポート, value: 'downoriented_additive_support'
+            name: ドリル, value: 'drill'
+            name: ドリル規則, value: 'drill_rule'
+            name: バー サポートのあるエッジ, value: 'edgebar_additive_support'
+            name: ポリライン サポートのあるエッジ, value: 'edgepolyline_additive_support'
+            name: サブツールパスを編集, value: 'subtoolpath'
+            name: 彫り込み, value: 'engrave'
+            name: 面, value: 'face'
+            name: フィーチャ構造, value: 'feature_construction'
+            name: フィーチャ認識, value: 'featureRecognition'
+            name: フラット, value: 'flat'
+            name: 平面度, value: 'flatness'
+            name: フロー, value: 'flow'
+            name: フロー(プレビュー), value: 'flow2'
+            name: フォルダ, value: 'folder'
+            name: GD&T データム, value: 'gdt_datum'
+            name: チェーン, value: 'geometry_chain'
+            name: 輪郭, value: 'geometry_contours'
+            name: チェーン(プレビュー), value: 'geometry_curve_chain'
+            name: 方向, value: 'geometry_direction'
+            name: 面, value: 'geometry_faces'
+            name: 面の輪郭, value: 'geometry_face_contours'
+            name: ポケット, value: 'geometry_pockets'
+            name: ポケット認識, value: 'pocket_recognition'
+            name: シルエット, value: 'geometry_silhouette'
+            name: スケッチ プロファイル, value: 'geometry_sketchProfiles'
+            name: ホルダー, value: 'holder'
+            name: 穴フィーチャ フォルダ, value: 'holeFeatureFolder'
+            name: 穴認識, value: 'holerecog'
+            name: 内側-内側寸法, value: 'inner_inner_dimension'
+            name: 円計測を検査, value: 'inspect_circle_measure'
+            name: 平面の大きさを検査, value: 'inspect_plane_measure'
+            name: サーフェスを検査, value: 'inspectSurface'
+            name: サーフェス形状を検査, value: 'inspectSurfaceGeometry'
+            name: 2D 輪郭, value: 'jet2d'
+            name: ジョブ, value: 'job'
+            name: ラティスのボリューム サポート, value: 'lattice_additive_support'
+            name: 直線寸法, value: 'linear_location_dimension'
+            name: 線の輪郭度, value: 'line_profile'
+            name: キネマティクス, value: 'machine_configuration_base'
+            name: マシン コンフィグ, value: 'machine_configuration'
+            name: ヘッド, value: 'machine_configuration_head'
+            name: 直線軸, value: 'machine_configuration_linear_axis'
+            name: 回転軸, value: 'machine_configuration_rotary_axis'
+            name: スピンドル, value: 'machine_configuration_spindle'
+            name: テーブル, value: 'machine_configuration_table'
+            name: マクロ, value: 'macro'
+            name: マクロ角度計測, value: 'macro_angle_measure'
+            name: マクロ円計測, value: 'macro_circle_measure'
+            name: マクロ コーナー計測, value: 'macro_corner_measure'
+            name: マクロ計測, value: 'macro_measure'
+            name: マクロ垂直距離計測, value: 'macro_perpendicular_distance_measure'
+            name: マクロ平面計測, value: 'macro_plane_measure'
+            name: マクロ矩形計測, value: 'macro_rectangle_measure'
+            name: 長径寸法, value: 'major_diameter_dimension'
+            name: 長半径寸法, value: 'major_radius_dimension'
+            name: マニュアル検査を作成, value: 'manual_inspect'
+            name: マニュアル計測, value: 'manual_measure'
+            name: マニュアル NC, value: 'manual'
+            name: 計測, value: 'measure'
+            name: 短径寸法, value: 'minor_diameter_dimension'
+            name: 短半径寸法, value: 'minor_radius_dimension'
+            name: 回転輪郭, value: 'moduleworks_4axis_finishing'
+            name: 回転ポケット, value: 'moduleworks_4axis_roughing'
+            name: バリ取り, value: 'moduleworks_automatic_deburring'
+            name: 測地線, value: 'moduleworks_geodesic'
+            name: 高度なスワーフ, value: 'moduleworks_swarf'
+            name: 自動 3+2 粗取り, value: 'moduleworks_three_plus_two'
+            name: モーフィング, value: 'morph'
+            name: モーフィング スパイラル, value: 'morphed_spiral'
+            name: 複合軸輪郭, value: 'multiAxisContour'
+            name: 複合軸モーフィング, value: 'multiAxisMorph'
+            name: NC プログラム, value: 'nc_program'
+            name: NC プログラム, value: 'nc_programs'
+            name: 等高線, value: 'contour_new'
+            name: ポケット除去, value: 'pocket_new'
+            name: 平坦部, value: 'horizontal_new'
+            name: 平行, value: 'parallel_new'
+            name: ペンシル, value: 'pencil_new'
+            name: 放射状, value: 'radial_new'
+            name: スキャロップ, value: 'scallop_new'
+            name: 渦巻き, value: 'spiral_new'
+            name: 外側-内側寸法, value: 'outer_inner_dimension'
+            name: 外側-外側寸法, value: 'outer_outer_dimension'
+            name: 平行度, value: 'Parallelism'
+            name: パーツの位置合わせ, value: 'part_alignment'
+            name: パスの計測, value: 'path_measure'
+            name: パターン, value: 'pattern'
+            name: 直角度, value: 'perpendicularity'
+            name: PMI, value: 'pmi_collection'
+            name: PMI フォルダ, value: 'pmi_folder'
+            name: PMI グラフィカル, value: 'pmi_graphical'
+            name: 備考, value: 'pmi_note'
+            name: 点群, value: 'point_cloud'
+            name: 位置, value: 'position'
+            name: プローブ WCS, value: 'probe'
+            name: 形状をプローブ, value: 'probe_geometry'
+            name: 投影, value: 'project'
+            name: 半径寸法, value: 'radius_dimension'
+            name: ランプ, value: 'ramp'
+            name: 取残し領域, value: 'rest_area'
+            name: コーナー, value: 'rest_finishing'
+            name: 結果, value: 'results'
+            name: 回転, value: 'rotary_finishing'
+            name: 真円度, value: 'roundness'
+            name: セッター サポート, value: 'setter_additive_support'
+            name: 設定, value: 'setup'
+            name: 設定, value: 'setups'
+            name: シルエット, value: 'silhouette'
+            name: シミュレーション, value: 'simulation'
+            name: ポリライン サポートのある中心軸, value: 'skeletonpolyline_additive_support'
+            name: スロット, value: 'slot'
+            name: 急斜面と緩斜面, value: 'steep_and_shallow'
+            name: ストック, value: 'stock'
+            name: 真直度, value: 'straightness'
+            name: 面の輪郭度, value: 'surface_profile'
+            name: 面の指示記号, value: 'surface_texture'
+            name: ポリライン サポートごとにボリュームを囲む, value: 'surroundvolumepolyline_additive_support'
+            name: スワーフ, value: 'swarf5d'
+            name: 対称度, value: 'symmetry'
+            name: 厚さ寸法, value: 'thickness'
+            name: ねじ切り, value: 'thread'
+            name: 工具, value: 'tool'
+            name: パスを削除, value: 'toolpath_edit_delete'
+            name: サブツールパスを削除, value: 'toolpath_edit_delete_sub_toolpath'
+            name: ツールパスの進入とリンク, value: 'toolpath_edit_leads_links'
+            name: 進入位置を移動, value: 'toolpath_edit_move_start_points'
+            name: サブツールパスの再配列, value: 'toolpath_edit_reorder_sub_toolpath'
+            name: 工具を置換, value: 'toolpath_edit_tool_change'
+            name: ツールパスをトリム, value: 'toolpath_trim'
+            name: 堆積工具, value: 'tool_depositing'
+            name: 工具ライブラリ, value: 'tool_library'
+            name: 旋盤工具, value: 'tool_turning'
+            name: 全振れ, value: 'total_runout'
+            name: トレース, value: 'path3d'
+            name: 旋盤負荷制御粗取り, value: 'turningAdaptiveRoughing'
+            name: バー プル, value: 'turningSecondarySpindlePull'
+            name: 旋盤面取り, value: 'turningChamfer'
+            name: 旋盤フェイシング, value: 'turningFace'
+            name: 旋盤単一溝切り, value: 'turningGroove'
+            name: 旋盤溝切り仕上げ, value: 'turningGrooveFinishing'
+            name: 旋盤切落とし, value: 'turningPart'
+            name: 旋盤輪郭, value: 'turningRoughing'
+            name: 旋盤輪郭仕上げ, value: 'turningProfileFinishing'
+            name: 旋盤溝切り, value: 'turningProfileGroove'
+            name: 旋盤輪郭粗取り, value: 'turningProfileRoughing'
+            name: 旋盤ストック移動, value: 'turningStockTransfer'
+            name: サブスピンドル チャック, value: 'turningSecondarySpindleGrab'
+            name: サブスピンドル リターン, value: 'turningSecondarySpindleReturn'
+            name: 旋盤ねじ切り, value: 'turningThread'
+            name: 谷, value: 'valley'
+
+name: surfaceXHigh
+    title: Surface X High
+    expression: "30."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.0
+
+name: surfaceXLow
+    title: Surface X Low
+    expression: "-30."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: -3.0
+
+name: surfaceYHigh
+    title: Surface Y High
+    expression: "61."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 6.1000000000000005
+
+name: surfaceYLow
+    title: Surface Y Low
+    expression: "1."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.1
+
+name: surfaceZHigh
+    title: 
+    expression: "30."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.0
+
+name: surfaceZLow
+    title: 
+    expression: "-30."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: -3.0
+
+name: tabApproach
+    title: 配置方法
+    expression: "'contour'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: contour
+        choices:
+            name: 等高線, value: 'contour'
+            name: セグメント, value: 'segment'
+
+name: tabDistance
+    title: タブ距離
+    expression: "tool_diameter * 8"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 8.0
+
+name: tabHeight
+    title: タブ高さ
+    expression: "tool_diameter * 0.25"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.25
+
+name: tabPositioning
+    title: タブの位置決め
+    expression: "'distance'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: distance
+        choices:
+            name: 距離, value: 'distance'
+            name: タブの数, value: 'tabCount'
+
+name: tabPositions
+    title: マニュアル タブ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: tabShape
+    title: タブ形状
+    expression: "'rectangular'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: rectangular
+        choices:
+            name: 四角形, value: 'rectangular'
+            name: 三角形, value: 'triangular'
+
+name: tabWidth
+    title: タブ幅
+    expression: "tool_diameter"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1.0
+
+name: tab_geometry
+    title: 形状
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tab_heights
+    title: 高さ
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tab_linking
+    title: リンク
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tab_passes
+    title: パス
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tab_tool
+    title: 工具
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tabsPerContour
+    title: 輪郭ごとのタブ
+    expression: "1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1
+
+name: tangentialExtensionDistance
+    title: 接線延長距離
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: tangentialExtensionDistanceEnd
+    title: 接線終点延長距離
+    expression: "tangentialExtensionDistance"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tangentialFragmentExtensionDistance
+    title: 正接の断片延長距離
+    expression: "0"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: taperApproachMode
+    title: 進入モード
+    expression: "'along-wall'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: along-wall
+        choices:
+            name: 壁に沿って, value: 'along-wall'
+            name: 垂直, value: 'vertically'
+
+name: thinWallWidth
+    title: うす壁幅
+    expression: "1.0mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.1
+
+name: thinningTolerance
+    title: 薄化の許容値
+    expression: "0.01*calculationTolerance"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1e-05
+
+name: tolerance
+    title: 許容差
+    expression: "0.01mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.001
+
+name: toolOrientationAccessibilityShadingEnabled
+    title: アクセシビリティ解析
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tool_bodyLength
+    title: ボディ長さ
+    expression: "50."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 5.0
+
+name: tool_breakControl
+    title: 切断コントロール
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: tool_clockwise
+    title: 右回りの主軸回転
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: tool_comment
+    title: コメント(C)
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: tool_compensationOffset
+    title: 補正オフセット
+    expression: "tool_number"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1
+
+name: tool_coolant
+    title: クーラント(C)
+    expression: "'flood'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: flood
+        choices:
+            name: 無効, value: 'disabled'
+            name: オイル, value: 'flood'
+            name: ミスト, value: 'mist'
+            name: 工具, value: 'tool'
+            name: エアー, value: 'air'
+            name: エアー(センター スルー), value: 'air through tool'
+            name: 吸引, value: 'suction'
+            name: オイルとミスト, value: 'flood mist'
+            name: オイルとセンタースルー, value: 'flood tool'
+
+name: tool_cornerRadius
+    title: コーナー半径
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_description
+    title: 詳細(D)
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: tool_diameter
+    title: 直径
+    expression: "10."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1.0
+
+name: tool_diameterOffset
+    title: 直径オフセット
+    expression: "tool_number"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1
+
+name: tool_feedCutting
+    title: 切削送り速度
+    expression: "1000."
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 1000.0
+
+name: tool_feedEntry
+    title: 進入送り速度
+    expression: "1000."
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 1000.0
+
+name: tool_feedExit
+    title: 退出送り速度
+    expression: "1000."
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 1000.0
+
+name: tool_feedPerRevolution
+    title: 1 回転あたりの切込み送り
+    expression: "tool_feedPlunge/tool_spindleSpeed"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.006666666666666667
+
+name: tool_feedPerTooth
+    title: 1 刃あたりの送り
+    expression: "tool_feedCutting/(tool_spindleSpeed * tool_numberOfFlutes)"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.006666666666666667
+
+name: tool_feedPlunge
+    title: 切込み送り速度
+    expression: "333.33333333333331"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 333.3333333333333
+
+name: tool_feedProbeLink
+    title: リンク送り速度
+    expression: "3000mmpm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 3000.0
+
+name: tool_feedProbeMeasure
+    title: 計測送り速度
+    expression: "102mmpm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 102.0
+
+name: tool_feedRamp
+    title: ランプ送り速度
+    expression: "333.33333333333331"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 333.3333333333333
+
+name: tool_feedRetract
+    title: 退避送り速度
+    expression: "tool_feedPlunge"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 333.3333333333333
+
+name: tool_finishingStepdown
+    title: 仕上げ切込みピッチ
+    expression: "0.2mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.020000000000000004
+
+name: tool_finishingStepover
+    title: 仕上げ切削ピッチ
+    expression: "tool_diameter * 0.1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.1
+
+name: tool_fluteLength
+    title: 刃長
+    expression: "20."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 2.0
+
+name: tool_inclusiveAngle
+    title: Inclusive Angle
+    expression: "tool_taperAngle * 2"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_isDepositing
+    title: 堆積工具
+    expression: "tool_type == 'laser powder' || tool_type == 'laser wire' || tool_type == 'electric arc wire'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: tool_isDrill
+    title: Drilling Tool
+    expression: "tool_type == 'counter bore' || tool_type == 'boring bar' || tool_type == 'spot drill' || tool_type == 'counter sink' || tool_type == 'center drill' || tool_type == 'tap right hand' || tool_type == 'tap left hand' || tool_type == 'drill' || tool_type == 'reamer' || tool_type == 'block drill'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: tool_isJet
+    title: Jet Tool
+    expression: "tool_type == 'laser cutter' || tool_type == 'waterjet' || tool_type == 'plasma cutter'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: tool_isMill
+    title: Milling Tool
+    expression: "tool_type == 'thread mill' || tool_type == 'form mill' || tool_type == 'tapered mill' || tool_type == 'radius mill' || tool_type == 'dovetail mill' || tool_type == 'face mill' || tool_type == 'bull nose end mill' || tool_type == 'slot mill' || tool_type == 'flat end mill' || tool_type == 'ball end mill' || tool_type == 'lollipop mill' || tool_type == 'chamfer mill'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: tool_isTurning
+    title: 旋盤工具
+    expression: "tool_type == 'turning boring' || tool_type == 'turning general' || tool_type == 'turning threading' || tool_type == 'turning grooving' || tool_type == 'turning custom'"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: tool_lengthOffset
+    title: 長オフセット
+    expression: "tool_number"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1
+
+name: tool_live
+    title: ライブ ツール
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: tool_manualToolChange
+    title: マニュアル工具交換
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: tool_material
+    title: 材料(M)
+    expression: "'hss'"
+    isEditable: False
+    isEnabled: True
+    ChoiceParameterValue
+        value: hss
+        choices:
+            name: 未指定, value: 'unspecified'
+            name: ハイス, value: 'hss'
+            name: ti コーティング, value: 'ti coated'
+            name: 超硬, value: 'carbide'
+            name: セラミック, value: 'ceramics'
+
+name: tool_number
+    title: 番号(N)
+    expression: "1"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1
+
+name: tool_numberOfFlutes
+    title: 刃数
+    expression: "3"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3
+
+name: tool_numberOfTeeth
+    title: 刃の数
+    expression: "1"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0
+
+name: tool_overallLength
+    title: 全長
+    expression: "50."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 5.0
+
+name: tool_productId
+    title: プロダクト ID
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: tool_productLink
+    title: プロダクト リンク
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: tool_rampAngle
+    title: ランプ角度(度)
+    expression: "2.0deg"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 2.0
+
+name: tool_rampSpindleSpeed
+    title: ランプ主軸回転速度
+    expression: "5000."
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 5000.0
+
+name: tool_rampType
+    title: Ramping Strategy
+    expression: "'helix'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: helix
+        choices:
+
+name: tool_segmentDiameterLower
+    title: 下側直径
+    expression: "tool_shaftDiameter*2"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 2.0
+
+name: tool_segmentDiameterUpper
+    title: 上側直径
+    expression: "tool_shaftDiameter*2"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 2.0
+
+name: tool_segmentHeight
+    title: セグメント高さ
+    expression: "tool_shaftDiameter/2"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.5
+
+name: tool_select
+    title: 工具
+    expression: "false"
+    isEditable: False
+    isEnabled: True
+    ** Failed to get value type.
+
+name: tool_shaftDiameter
+    title: 軸径
+    expression: "tool_diameter"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1.0
+
+name: tool_shaftSegmentDiameterLower
+    title: 下側直径
+    expression: "tool_diameter"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1.0
+
+name: tool_shaftSegmentDiameterUpper
+    title: 上側直径
+    expression: "tool_shaftDiameter"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1.0
+
+name: tool_shaftSegmentHeight
+    title: セグメント高さ
+    expression: "Math.max((tool_bodyLength - tool_shoulderLength)/2; 1.0)"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 1.0
+
+name: tool_shoulderLength
+    title: 首下長
+    expression: "30."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.0
+
+name: tool_spindleSpeed
+    title: 主軸回転速度
+    expression: "5000."
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 5000.0
+
+name: tool_stepdown
+    title: 切込みピッチ
+    expression: "1.0mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.1
+
+name: tool_stepover
+    title: 切削ピッチ
+    expression: "tool_diameter * 0.5"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.5
+
+name: tool_stockDiameter
+    title: ストック直径
+    expression: "tool_isTurning ? (tool_unit == 'millimeters' ? 25mm : 1.0in) : tool_diameter"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1.0
+
+name: tool_surfaceSpeed
+    title: 周速度
+    expression: "tool_diameter * Math.PI * tool_spindleSpeed"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 157079.63267948967
+
+name: tool_taperAngle
+    title: テーパ角度
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_taperedType
+    title: テーパ タイプ
+    expression: "'tapered_bull_nose'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: tapered_bull_nose
+        choices:
+            name: ブルノーズ, value: 'tapered_bull_nose'
+            name: ボール, value: 'tapered_ball'
+
+name: tool_threadPitch
+    title: ねじピッチ
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_threadProfileAngle
+    title: ねじ切り輪郭の角度
+    expression: "60."
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_tipAngle
+    title: 傾斜角度
+    expression: "(tool_type == 'counter sink') ? 90.0deg : ((tool_type == 'spot drill') ? 120deg : 118.0deg)"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_tipDiameter
+    title: 先端径
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 1.0
+
+name: tool_tipLength
+    title: 先端長
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_tipOffset
+    title: 先端オフセット
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: tool_turret
+    title: ターレット(T)
+    expression: "0"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0
+
+name: tool_type
+    title: タイプ
+    expression: "'flat end mill'"
+    isEditable: False
+    isEnabled: True
+    ChoiceParameterValue
+        value: flat end mill
+        choices:
+            name: フラット エンド ミル, value: 'flat end mill'
+            name: ボール エンド ミル, value: 'ball end mill'
+            name: ブルノーズ エンド ミル, value: 'bull nose end mill'
+
+name: tool_unit
+    title: 単位
+    expression: "'millimeters'"
+    isEditable: False
+    isEnabled: True
+    ChoiceParameterValue
+        value: millimeters
+        choices:
+            name: ミリ, value: 'millimeters'
+            name: インチ, value: 'inches'
+
+name: tool_vendor
+    title: ベンダー(V)
+    expression: "''"
+    isEditable: False
+    isEnabled: True
+    StringParameterValue
+        value: 
+
+name: topHeight_absolute
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: topHeight_group
+    title: トップ高さ
+    expression: "true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: topHeight_mode
+    title: 始点
+    expression: "'from stock top'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: from stock top
+        choices:
+            name: 移動高さ, value: 'from clearance height'
+            name: 退避高さ, value: 'from retract height'
+            name: 送り高さ, value: 'from feed height'
+            name: ボトム高さ, value: 'from bottom'
+            name: モデル トップ, value: 'from surface top'
+            name: モデル ボトム, value: 'from surface bottom'
+            name: ストック トップ, value: 'from stock top'
+            name: ストック ボトム, value: 'from stock bottom'
+            name: 選択された輪郭, value: 'from contour'
+            name: 選択, value: 'from point'
+            name: 原点(絶対), value: 'from wcs'
+
+name: topHeight_offset
+    title: オフセット
+    expression: "0mm"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: topHeight_ref
+    title: 参照トップ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: topHeight_value
+    title: 
+    expression: "31."
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 3.1
+
+name: undercut
+    title: 
+    expression: "true"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: unwrap
+    title: 形状をアンラップ
+    expression: "true"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: useEvenStepdowns
+    title: 均等切込みピッチを使用
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: useFeedOptimization
+    title: 送り最適化
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: useRestMachining
+    title: 取残し加工
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: useStockContours
+    title: ストック輪郭
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: useStockToLeave
+    title: 維持するストック
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: useThinWall
+    title: うす壁を使用
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: useZFeed
+    title: 
+    expression: "(feedHeight_mode == 'disabled') ? false : true"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: use_tool_stepdown
+    title: 切込みピッチを使用
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: use_tool_stepover
+    title: 切削ピッチを使用
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: False
+
+name: verticalStockToLeave
+    title: 軸方向の仕上げ代
+    expression: "stockToLeave"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: view_align_to_view
+    title: ビューに位置合わせ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    ** Failed to get value type.
+
+name: view_align_to_view_direction
+    title: ビューに位置合わせ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_model_point
+    title: モデル点
+    expression: "true"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_orientation_axisX
+    title: X 軸
+    expression: "false"
+    isEditable: True
+    isEnabled: True
+    CadObjectParameterValue
+        value: Empty
+
+name: view_orientation_axisY
+    title: Y 軸
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_orientation_axisZ
+    title: Z 軸
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    CadObjectParameterValue
+        value:
+            BRepEdge
+
+name: view_orientation_cSys
+    title: 座標系
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_orientation_flipX
+    title: X 軸を反転
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: view_orientation_flipY
+    title: Y 軸を反転
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: False
+
+name: view_orientation_flipZ
+    title: Z 軸を反転
+    expression: "true"
+    isEditable: True
+    isEnabled: True
+    FloatParameterValue
+        value: True
+
+name: view_orientation_mode
+    title: 工具方向
+    expression: "'axesZX'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: axesZX
+        choices:
+            name: モデル方向, value: 'modelOrientation'
+            name: WCS 方向設定, value: 'useWCS'
+            name: Z 軸/平面、X 軸を選択, value: 'axesZX'
+            name: Z 軸/平面、Y 軸を選択, value: 'axesZY'
+            name: X 軸、Y 軸を選択, value: 'axesXY'
+            name: 座標系を選択, value: 'coordinateSystem'
+            name: サーフェス法線と X 軸, value: 'surfaceNormalX'
+            name: サーフェス法線と Y 軸, value: 'surfaceNormalY'
+
+name: view_orientation_surfaceNormal
+    title: サーフェス点
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_origin_boxPoint
+    title: Bounding Box Point
+    expression: "'top center'"
+    isEditable: False
+    isEnabled: False
+    ChoiceParameterValue
+        value: top center
+        choices:
+            name: トップ中心, value: 'top center'
+            name: トップコーナー 1, value: 'top 1'
+            name: トップコーナー 2, value: 'top 2'
+            name: トップコーナー 3, value: 'top 3'
+            name: トップコーナー 4, value: 'top 4'
+            name: トップ サイド 1, value: 'top side 1'
+            name: トップ サイド 2, value: 'top side 2'
+            name: トップ サイド 3, value: 'top side 3'
+            name: トップ サイド 4, value: 'top side 4'
+            name: 中心, value: 'center'
+            name: 中央サイド 1, value: 'middle side 1'
+            name: 中央サイド 2, value: 'middle side 2'
+            name: 中央サイド 3, value: 'middle side 3'
+            name: 中央サイド 4, value: 'middle side 4'
+            name: 中央コーナー 1, value: 'middle 1'
+            name: 中央コーナー 2, value: 'middle 2'
+            name: 中央コーナー 3, value: 'middle 3'
+            name: 中央コーナー 4, value: 'middle 4'
+            name: ボトム中心, value: 'bottom center'
+            name: ボトム コーナー 1, value: 'bottom 1'
+            name: ボトム コーナー 2, value: 'bottom 2'
+            name: ボトム コーナー 3, value: 'bottom 3'
+            name: ボトム コーナー 4, value: 'bottom 4'
+            name: ボトム側面 1, value: 'bottom side 1'
+            name: ボトム側面 2, value: 'bottom side 2'
+            name: ボトム側面 3, value: 'bottom side 3'
+            name: ボトム側面 4, value: 'bottom side 4'
+
+name: view_origin_mode
+    title: 原点
+    expression: "'jobOrigin'"
+    isEditable: True
+    isEnabled: True
+    ChoiceParameterValue
+        value: jobOrigin
+        choices:
+            name: WCS 原点設定, value: 'jobOrigin'
+            name: サーフェス点, value: 'surfacePointOrigin'
+            name: モデル原点, value: 'modelOrigin'
+            name: 選択された点, value: 'point'
+            name: モデル ボックス点, value: 'modelPoint'
+            name: ストック ボックス点, value: 'stockPoint'
+
+name: view_origin_point
+    title: 工具方向の原点
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_stock_point
+    title: ストック点
+    expression: "true"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: view_tilt_from_recipe
+    title: 傾斜
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: view_turn_from_recipe
+    title: 回転
+    expression: "0.0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: wallTaperAngle
+    title: 
+    expression: "doMultipleDepths ? slopeAngle : (tool_taperAngle > 0 ? tool_taperAngle : tool_tipAngle*0.5)"
+    isEditable: False
+    isEnabled: True
+    FloatParameterValue
+        value: 0.0
+
+name: wrap_cylinder
+    title: 円柱をラップ
+    expression: "false"
+    isEditable: False
+    isEnabled: False
+    CadObjectParameterValue
+        value: Empty
+
+name: wrap_cylinder_radius
+    title: 
+    expression: "0"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: wrap_nominalRadius_offset
+    title: オフセット
+    expression: "0mm"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
+
+name: wrap_nominalRadius_value
+    title: 半径
+    expression: "wrap_cylinder_radius + wrap_nominalRadius_offset"
+    isEditable: False
+    isEnabled: False
+    FloatParameterValue
+        value: 0.0
