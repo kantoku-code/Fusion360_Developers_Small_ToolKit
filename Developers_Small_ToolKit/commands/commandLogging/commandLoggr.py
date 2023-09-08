@@ -7,6 +7,7 @@ import adsk.fusion
 _cmdLog_handler = None
 _panel = False
 _handlers = []
+DEBUG = True
 
 def entry() -> dict:
     return {
@@ -23,6 +24,7 @@ def entry() -> dict:
 
 def run(context):
     pass
+
 
 def changeSwitchCheckValue(sw_value, ch_value) -> bool:
     app: adsk.core.Application = adsk.core.Application.get()
@@ -48,6 +50,7 @@ def changeSwitchCheckValue(sw_value, ch_value) -> bool:
     except:
         app.log('Failed:\n{}'.format(traceback.format_exc()))
 
+
 def removeEvent():
     app: adsk.core.Application = adsk.core.Application.get()
     ui: adsk.core.UserInterface = app.userInterface
@@ -56,6 +59,20 @@ def removeEvent():
     app.log('-- stop command log --')
     ui.commandStarting.remove(_cmdLog_handler)
     _handlers.remove(_cmdLog_handler)
+
+
+def get_active_tab() -> adsk.core.ToolbarTab:
+    app: adsk.core.Application = adsk.core.Application.get()
+    ui: adsk.core.UserInterface = app.userInterface
+
+    tabs: list[adsk.core.ToolbarTab] = [tb for tb in ui.allToolbarTabs 
+        if all([tb.isActive, tb.isVisible])]
+    
+    if len(tabs) < 1:
+        return None
+    else:
+        return tabs[0]
+
 
 class CommandStartingHandler(adsk.core.ApplicationCommandEventHandler):
     def __init__(self):
@@ -83,63 +100,53 @@ class CommandStartingHandler(adsk.core.ApplicationCommandEventHandler):
                 except:
                     return
 
-                # Toolbar panel
-                panelId: str = ''
-                try:
-                    actEditObj = adsk.fusion.Sketch.cast(app.activeEditObject)
-                    if actEditObj:
-                        # sketch
-                        tpIds = [
-                            'SketchCreatePanel',
-                            'SketchModifyPanel',
-                            'SketchConstraintsPanel',
-                            # 'PCB3DSketchCreatePanel'
+                # tab
+                tab: adsk.core.ToolbarTab = get_active_tab()
+                if not tab: return
+
+                # panel
+                panel: adsk.core.ToolbarPanel = None
+                for panel in tab.toolbarPanels:
+
+                    control: adsk.core.ToolbarControl = panel.controls.itemById(
+                        args.commandId
+                    )
+                    if control:
+                        app.log(
+                            ' Workspace_ID:{}\n  Tab_ID:{}\n  Panel_ID:{}'.format(
+                                ws.id, tab.id, panel.id
+                            )
+                        )
+                        break
+                    else:
+                        dropdowns = [c for c in panel.controls
+                            if c.classType() == adsk.core.DropDownControl.classType()
                         ]
 
-                        panels = ui.allToolbarPanels
-                        tpLst = [panels.itemById(tpId) for tpId in tpIds]
-                    else:
-                        # other Design
-                        tpLst = ui.toolbarPanelsByProductType(ws.productType)
-                except:
-                    # other non Design
-                    tpLst = ui.toolbarPanelsByProductType(ws.productType)
+                        dropdownControl: adsk.core.DropDownControl = None
+                        for dropdownControl in dropdowns:
 
-                for tp in tpLst:
-                    tc: adsk.core.ToolbarControl = tp.controls.itemById(cmdId)
-                    if tc:
-                        panelId = tp.id
-                        break
+                            control: adsk.core.ToolbarControl = dropdownControl.controls.itemById(
+                                args.commandId
+                            )
+                            if not control: continue
 
-                    # DropDownControl
-                    for dd in tp.controls:
-                        if adsk.core.DropDownControl.cast(dd):
-                            tc = dd.controls.itemById(cmdId)
-                            if tc:
-                                panelId = tp.id
-                                break
-
-                # Toolbar tab
-                tabId = ''
-                if len(panelId) < 1:
-                    panelId = tabId = '(unknown)'
-                else:
-                    ttLst = ui.toolbarTabsByProductType(ws.productType)
-                    for tt in ttLst:
-                        try:
-                            tp = tt.toolbarPanels.itemById(panelId)
-                        except:
-                            continue
-
-                        if tp:
-                            tabId = tt.id
+                            app.log(
+                                ' Workspace_ID:{}\n  Tab_ID:{}\n  Panel_ID:{}'.format(
+                                    ws.id, tab.id, panel.id
+                                )
+                            )
                             break
 
-                    if len(tabId) < 1:
-                        tabId = '(unknown)'
-
-                app.log(' Workspace_ID:{}\n  Tab_ID:{}\n  Panel_ID:{}'.format(
-                    ws.id, tabId, panelId))
+                # app.log(
+                #     ' Workspace_ID:{}\n  Tab_ID:{}\n  Panel_ID: **unknown**'.format(
+                #         ws.id, tab.id
+                #     )
+                # )
 
         except:
             ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
+
+def dump(s):
+    if DEBUG:
+        print(s)
