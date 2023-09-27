@@ -34,6 +34,7 @@
 - Remove Custom Graphics: 全てのカスタムグラフィックスを削除します。
 - Export TextCommands List: TextCommands(txt)のコマンドリストをファイルに保存します。
 - Create Language Startup Fusion360 Script: 日本語・英語を指定して起動するためのスクリプトファイルを作成します。
+- ReBoot Document: アクティブなドキュメントの**変更を破棄し**、再度開き直します。
 ---
 - Open CustomPost Folder: カスタムされた製造ポストファイル(cps)のフォルダーを開きます。
 - Open InstallPost Folder: インストールされた製造ポストファイル(cps)のフォルダーを開きます。

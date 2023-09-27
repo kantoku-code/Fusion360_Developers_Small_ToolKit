@@ -1,5 +1,8 @@
 # Change of Fusion360 Developers Small ToolKit
 
+## 0.1.6
++ ReBoot Document コマンド追加
+
 ## 0.1.5
 + commandLogging コマンド - 不正確なパネル情報の出力を修正
 
