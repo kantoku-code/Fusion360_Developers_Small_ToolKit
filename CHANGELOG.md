@@ -1,5 +1,8 @@
 # Change of Fusion360 Developers Small ToolKit
 
+## 0.1.7
++ Ver2.0.20256でFusion360起動時にクラッシュを引き起こすバグ修正
+
 ## 0.1.6
 + ReBoot Document コマンド追加
 

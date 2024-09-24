@@ -155,7 +155,7 @@ def run(context):
         _app.log(f'  Fusion360 Ver{_app.version}')
         _app.log(f'  Python Ver{sys.version}')
 
-        showPaletteCmdDef.execute()
+        # showPaletteCmdDef.execute()
 
         # start up
         global _startUp
@@ -228,8 +228,11 @@ def CreatePalette():
         _handlers.append(onClosed)
 
     except:
-        _ui.messageBox('Command executed failed: {}'.format(
-            traceback.format_exc()))
+        _ui.messageBox(
+            'Command executed failed: {}'.format(
+                traceback.format_exc()
+            )
+        )
 
 
 def dumpLog(msg):
