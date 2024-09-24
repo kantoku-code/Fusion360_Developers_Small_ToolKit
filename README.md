@@ -72,7 +72,7 @@
 
 以下の環境で確認しています。
 
-- Fusion360 Ver2.0.14109
+- Fusion360 Ver2.0.20256
 - Windows10 64bit Pro , Home
 
 ## ライセンス :
